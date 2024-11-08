@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.main{
+    text-align: center;
+}
+
+.header{
+    margin-bottom: 0px;
+}
+#admin{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
