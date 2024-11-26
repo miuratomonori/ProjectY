@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/icons/ncc.ico">
     <link rel="stylesheet" href="">
-    <title>NCC出席：出席画面</title>
+    <title>NCC出席:出席画面</title>
 </head>
 <body>
     <div class="main">
+        <!-- QR表示ここから -->
         <div class="QR">
 
         </div>
+        <!-- QR表示ここまで -->
+        <!-- 出席登録 -->
         <div class="attendance">
             <form>
                 <p>学籍番号を入力してください</p>
                 <input type="text" id="studentID">
                 <p>キーワードを入力してください</p>
                 <input type="text" id="keyword">
+                <button onclick="buttonClick()">送信</button>
             </form>
         </div>
+
+        <p><a href="index.html">戻る</a></p>
     </div>
 </body>
 </html>
+<script src="../static/javascript/QR.js"></script>

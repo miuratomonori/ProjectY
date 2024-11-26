@@ -3,20 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/icons/ncc.ico">
+    <link rel="stylesheet" href="../static/css/styleAdmin.css">
     <title>管理者画面</title>
 </head>
 <body>
-    <div class="menu">
-        <div class="select">
-
-        </div>
-        <div class="sort">
-
-        </div>
-        <p id="">ダウンロード</p>
-    </div>
     <div class="main">
-        
+        <div class="menu">
+            <div class="select"><!-- 表示するデータを選択 -->
+                
+            </div>
+            <div class="sort"><!-- 絞り込み  -->
+                <form id="">
+                    <p>学生名</p>
+                    <input type="text">
+                    <p>学年</p>
+                    <input type="text">
+                    <p>学科</p>
+                    <input type="text">
+                    <p>
+                        <button type="submit" formaction="" formmethod="post">絞り込み</button>
+                    </p>
+                </form>
+            </div>
+            <button id="download">ダウンロード</button>
+            <button onclick="location.href='index.html'">ログアウト</button>
+        </div>
+        <div class="table">
+            <!-- 生徒テーブルの表示 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>名前</th>
+                        <th>学籍番号</th>
+                        <th>学生番号</th>
+                        <th>出席数</th>
+                        <th>欠席数</th>
+                        <th>公欠数</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    {% for  %}
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
