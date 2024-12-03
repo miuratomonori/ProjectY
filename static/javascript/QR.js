@@ -27,3 +27,8 @@ function buttonClick(){
     });
   }
     
+  $.get("https://ipinfo.io", function(res) {
+
+    console.log(res.ip);
+
+}, "jsonp");
