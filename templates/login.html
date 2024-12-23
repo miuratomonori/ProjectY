@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/icons/ncc.ico">
+    <title>NCC出席</title>
+</head>
+<body>
+    <div class="main">
+        <h1>ログイン画面</h1>
+        <form method="post" id="admin">
+            {{ form.hidden_tag() }}
+
+            <div>
+                {{ form.id.label }}{{ for.id() }}
+                {% for error in for.email.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.password.label }}{{ form.password() }}
+                {% for error in form.password.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            {{ for.submit() }}
+        </form>
+    </div>
+</body>
+</html>
+<script src="../static/javascript/login.js"></script>

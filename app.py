@@ -25,8 +25,12 @@ init_db()
 def index():
     return render_template("index.html")
 
-@app.route("/login", methods=["POST"])
+@app.route("/login")
 def login():
+    return render_template("login.html")
+
+@app.route("/login_path", methods=["POST"])
+def login_path():
     print('test')
 
     data = request.json

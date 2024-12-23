@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        crossorigin="anonymous"></script>
+    <!--CSSの読み込み-->
     <link rel="stylesheet" href="../static/css/style.css">
+    <!--JSの読み込み-->
+    <script src="../static/javascript/index.js"></script>
+    <!--アイコンの読み込み-->
     <link rel="icon" href="../static/icons/ncc.ico">
     <title>NCC出席</title>
 </head>
 <body>
+    <div class="header">
+        <p id="admin"><a href="/login">教職員用</p>
+    </div>
     <div class="main">
-        <h1>ログイン画面</h1>
-        <form id="admin">
-            <p>番号</p>
-            <input type="text" id="no">
-
-            <p>パスワード</p>
-            <input type="password" id="pass">
-
-            <p><button id="login" onclick="loginClick()">ログイン</button></p>
-        </form>
+        <h1><a href="">出席する</a></h1>
     </div>
 </body>
 </html>
-<script src="../static/javascript/index.js"></script>

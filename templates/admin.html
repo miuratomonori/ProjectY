@@ -37,22 +37,23 @@
                         <th>名前</th>
                         <th>学籍番号</th>
                         <th>学生番号</th>
+                        <th>科目</th>
                         <th>出席数</th>
                         <th>欠席数</th>
-                        <th>公欠数</th>
                     </tr>
                 </thead> 
-                
+                {% for d in data %}
                 <tbody>
-                    
                     <tr>
                         <td>1</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
                         <td>5</td>
+                        <td>6</td>
                     </tr>
                 </tbody>
+                {% endfor %}
             </table>
         </div>
     </div>
