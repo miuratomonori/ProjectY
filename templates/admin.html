@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/icons/ncc.ico">
+    <!--レイアウトの読み込み-->
     <link rel="stylesheet" href="../static/css/styleAdmin.css">
+    <!--共通のスタイルの読み込み-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!--アイコンの読み込み-->
+    <link rel="icon" href="../static/icons/ncc.ico">
     <title>管理者画面</title>
 </head>
 <body>
     <div class="main">
         <div class="menu">
-            <div class="select"><!-- 表示するデータを選択 -->
-                
-            </div>
-            <div class="sort"><!-- 絞り込み  -->
-                <form id="">
+            <div class="select"><!-- 絞り込み  -->
+                <form id="select">
                     <p>学生名</p>
                     <input type="text">
                     <p>学年</p>
@@ -27,7 +28,7 @@
                 </form>
             </div>
             <button id="download">ダウンロード</button>
-            <button onclick="location.href='/index.html'">ログアウト</button>
+            <a href="/logout">ログアウト</a>
         </div>
         <div class="table">
             <!-- 生徒テーブルの表示 -->
@@ -41,19 +42,10 @@
                         <th>出席数</th>
                         <th>欠席数</th>
                     </tr>
-                </thead> 
-                {% for d in data %}
+                </thead>
+                <!--動的に表が作成-->
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                    </tr>
                 </tbody>
-                {% endfor %}
             </table>
         </div>
     </div>
