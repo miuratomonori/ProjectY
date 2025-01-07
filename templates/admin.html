@@ -9,23 +9,25 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <!--アイコンの読み込み-->
     <link rel="icon" href="../static/icons/ncc.ico">
+    <!--jQueryのCDNの読み込み-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7ieXS/dIvPLaw4="
+        crossorigin="anonymous"></script>
     <title>管理者画面</title>
 </head>
 <body>
     <div class="main">
         <div class="menu">
             <div class="select"><!-- 絞り込み  -->
-                <form id="select">
-                    <p>学生名</p>
-                    <input type="text">
-                    <p>学年</p>
-                    <input type="text">
-                    <p>学科</p>
-                    <input type="text">
-                    <p>
-                        <button type="submit" formaction="" formmethod="post">絞り込み</button>
-                    </p>
-                </form>
+                <p>学生名</p>
+                <input type="text">
+                <p>学年</p>
+                <input type="text">
+                <p>学科</p>
+                <input type="text">
+                <p>
+                    <button id="filterButton">絞り込み</button>
+                </p>
             </div>
             <button id="download">ダウンロード</button>
             <a href="/logout">ログアウト</a>
