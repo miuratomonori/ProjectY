@@ -7,9 +7,13 @@ $(document).ready(function () {
         data.forEach(item => {
             const row = `
                 <tr>
-                    <td>${item.id}</td>
                     <td>${item.name}</td>
-                    <td>${item.age}</td>
+                    <td>${item.student_id}</td>
+                    <td>${item.registration_number}</td>
+                    <td>${item.major}</td>
+                    <td>${item.subject}</td>
+                    <td>${item.attendance_count}</td>
+                    <td>${item.absence_count}</td>
                 </tr>
             `;
             tableBody.append(row);
@@ -17,30 +21,32 @@ $(document).ready(function () {
     }
 
     // データ取得リクエスト
-    function fetchData(filterName = "") {
-        // AJAXリクエストをPromise形式で処理
+    function fetchData(filters) {
         $.ajax({
             url: "/get_data",
             method: "GET",
-            data: { filter_name: filterName },
+            data: filters,
         })
         .then(function (response) {
-            // 正常にデータを取得した場合
             updateTable(response);
         })
         .catch(function (error) {
-            // エラーが発生した場合
             console.error("データ取得中にエラーが発生しました:", error);
-            alert("データの取得に失敗しました。サーバーを確認してください。");
+            alert("データの取得に失敗しました。");
         });
     }
 
-    // 初回ロード時に全データを取得
-    fetchData();
-
     // フィルタボタンが押されたときの処理
     $("#filterButton").on("click", function () {
-        const filterName = $("#filterInput").val();
-        fetchData(filterName);
+        const filters = {
+            filter_name: $("#filterName").val(),
+            filter_subject: $("#filterSubject").val(),
+            filter_student_id: $("#filterStudentID").val(),
+            filter_major: $("#filterMajor").val(),
+        };
+        fetchData(filters);
     });
+
+    // 初回ロード時に全データを取得
+    fetchData({});
 });
